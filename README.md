@@ -1,2 +1,2 @@
 # worldBooks
-Simple example Django project by the book "PyCharm Django Python for beginers"
+Simple example Django project by the book "Python Django PyCharm for beginers"
