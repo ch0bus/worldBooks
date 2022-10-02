@@ -1,0 +1,25 @@
+<!-- Listing 9.11-->
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список книг в БД</h1>
+    <!--
+        Внутри этого шаблона можно будет получить доступ к списку книг при помощи
+        переменной шаблона object_list (в нашем случае- book_list, поскольку имя этой
+        переменной формируется по шаблону: model_name_list).
+    -->
+    {% if book_list %}
+    <ul>
+      {% for book in book_list %}
+      <li>
+        <a href="{{ book.get_absolute_url }}">
+                 {{ book.title }}</a>
+                 ({{book.genre}})
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>В базе данных нет книг</p>
+    {% endif %}
+{% endblock %}
+
