@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-3+32cdd$$xpf&y&w)1ljoov$c6_a)94pie_v-z&#%4m!8cq936'
-SECRET_KEY = os.environ['SECRET_KEY']
+#SECRET_KEY = os.environ['SECRET_KEY']
 # ИЛИ чтение ключа из файла
-with open('/etc/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+#with open('/etc/secret_key.txt') as f:
+#    SECRET_KEY = f.read().strip()
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
